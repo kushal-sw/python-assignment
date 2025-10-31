@@ -9,3 +9,4 @@ print(a is b)
 print(x == y)
 
 print(a == b)
+capitalize("hello world")
