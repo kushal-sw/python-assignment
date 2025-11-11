@@ -25,3 +25,32 @@
                       print(f"Digit {x} is in the correct position.")
                   if str(three_digit_number).index(x) != guess.index(x):
                          print(f"Digit {x} is in the wrong position.")
+
+#Question : Birthday Paradox
+#Code
+import random
+def simulate_birthday_paradox(num_people, simulations=100):
+"""Simulate the Birthday Paradox to calculate the probability."""
+match_count = 0
+for
+_
+duplicates
+in range(simulations):
+birthdays = [random.randint(1, 365) for
+_
+in range(num_people)]
+if len(birthdays) != len(set(birthdays)): # Check for
+match_count += 1
+probability = match_count / simulations
+return probability
+if __name__ == "__main__":
+print("Birthday Paradox Simulation")
+num_people = int(input("Enter the number of people in the group: "))
+probability = simulate_birthday_paradox(num_people)
+print(f"The probability of at least two people sharing a birthday in
+a group of {num_people} is approximately {probability:.2%}.")
+#Output
+Birthday Paradox Simulation
+Enter the number of people in the group: 23
+The probability of at least two people sharing a birthday in a group of
+23 is approximately 49.50%.
