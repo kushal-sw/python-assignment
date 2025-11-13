@@ -83,3 +83,60 @@ if __name__ == '__main__':
     arr = list(map(input().split()))
     runner_up = max(-1)
     print(runner_up)
+#Question 9
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    
+    average = (sum(student_marks[query_name]))/(len(student_marks[query_name]))
+    print(f"{average:.2f}")
+
+#Question 10
+if __name__ == '__main__':
+    N = int(input())
+    nums = []
+    
+    for _ in range(N):
+        command = input().split()
+        action = command[0]
+
+        if action == 'insert':
+            nums.insert(int(command[1]), int(command[2]))
+        elif action == 'print':
+            print(nums)
+        elif action == 'remove':
+            nums.remove(int(command[1]))
+        elif action == 'append':
+            nums.append(int(command[1]))
+        elif action == 'sort':
+            nums.sort()
+        elif action == 'pop':
+            nums.pop()
+        elif action == 'reverse':
+            nums.reverse()
+
+#Question 11
+if __name__ == '__main__':
+    n = int(input())
+    integer_list = map(int, input().split())
+    t = tuple(integer_list)
+    print(hash(t))
+
+#Question 12
+def swap_case(s):
+    return s.swapcase()
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
+
+
+
+
+
