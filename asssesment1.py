@@ -9,3 +9,5 @@ else:
 x =5
 z =10
 print(x > 5 or x< 10)
+
+
